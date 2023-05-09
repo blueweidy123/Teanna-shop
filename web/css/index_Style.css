@@ -1,0 +1,43 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Feb 10, 2023, 5:54:52 PM
+    Author     : anlal
+*/
+
+html {
+    min-height: 100%;
+}
+
+body{
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(to bottom left, #ff3399 0%, #33ccff 100%);
+}
+
+.OuterContainer{
+    position: fixed;
+    top: 80px;
+    left: 2.5%;
+    width: 95%;
+    height: 85vh;
+    background-color: #FFF;
+    margin: 0 auto 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    /*border: 2px solid red;*/
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+

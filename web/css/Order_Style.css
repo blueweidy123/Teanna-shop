@@ -1,0 +1,325 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Feb 10, 2023, 9:22:59 PM
+    Author     : anlal
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.orderPrice{
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    z-index: 100;
+}
+
+.OuterContainer{
+    scroll-padding-bottom: 100px;
+}
+
+.container-fluid{
+    scroll-snap-align: start;
+    padding-top: 1rem;
+    min-height: 97vh;
+    z-index: 99;
+}
+
+.icon{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.icon.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.navbar{
+    z-index: 2;
+    width: 95%;
+    padding: 1px 0;
+    background: #1b1b1b;
+    justify-content: space-between;
+}
+
+.navbar.sticky{
+    background: #1b1b1b;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+}
+
+.navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transform: translate(10px, 10px);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.logo{
+    margin-bottom: auto;
+    margin-bottom: 20px;
+}
+
+.navbar .logo a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: auto 20px auto 0px;
+}
+
+.menu-list{
+    margin-right: auto 20px auto 0px;
+    display: inline-flex;
+    padding: 10px;
+}
+
+.menu-list li{
+    list-style: none;
+}
+
+.menu-list li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-list li a:hover{
+    color: #007bff;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    padding: 4px 16px;
+    transition: all 0.3s ease;
+}
+
+.sideBarContent{
+    position: fixed;
+    z-index: 3;
+    top: 15%;
+    left: -5%;
+    border-radius: 8px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, .6);
+    /*color: rgba(0, 0, 0, .6);*/
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    overflow: scroll;
+    width: 15vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    opacity: 0;
+    transition: all 0.7s ease;
+    
+}
+
+.sideBarContent.active{
+    left: 3.5%;
+    opacity: 1;
+    transition: all 1s ease;
+    /*border: 1px solid blueviolet;*/
+}
+
+.itemNav ul{
+    /*border: 2px solid white;*/
+    padding: 0 !important;
+    /*margin: 0 !important;*/
+    /*border: 1px solid blue;*/
+    margin: auto 0px auto 0px;
+}
+
+.itemNav li{
+    display: block;
+    list-style: none;
+    text-align: center;
+    border-top: 1px solid #FFF;
+    padding: 20px 10px 0px;
+    margin: 0px auto 16px auto;
+    /*border: 1px solid red;*/
+}
+
+.itemNav li a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    /*margin-bottom: 10px;*/
+}
+
+.itemNav li:hover{
+    transform: translateX(15px);
+    background: #f89035;
+    /*color: #007bff;*/
+    /*border: 2px solid darkorange;*/
+    transition: all 0.5s ease;
+
+}
+
+.banner{
+    width: 100%;
+    height: 97vh;
+    background: url("banner2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.bannerHeading{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: all 1s ease;
+}
+
+.bannerHeading h1{
+    color: #FFF;
+    font-size: 10rem;
+    text-shadow: -15px 20px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+.bannerHeading.hide{
+    top: -0%;
+    transition: all .5s ease;
+    opacity: 0;
+    /*display: none;*/
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (max-width: 1230px) {
+    .content{
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .content{
+        padding: 0 40px;
+    }
+    .itemNav li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .itemNav li a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .itemNav li a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content{
+        padding: 0 20px;
+    }
+    .OuterContainer{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        overflow: hidden;
+    }
+    .navbar{
+        min-width: 100%;
+        right: 0px;
+        left: 0px;
+    }
+    .sideBarContent{
+        width: 23vw;
+        left: 2.5vw;
+    }
+    .sideBarContent{
+        width: 22vw;
+    }
+
+}
+
+@media (max-width: 868px) {
+    .icon{
+        display: block;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        background: #222;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        right: 100%;
+        font-size: 23px;
+        margin-left: 100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a{
+        margin-left: 0px;
+    }
+    .navbar.show .menu-list{
+        top: 0%;
+        right: -2.5%;
+    }
+    .navbar .menu-list.active{
+
+    }
+    .icon.hide{
+        display: none;
+    }
+    .sideBarContent.active{
+        left: 2.5%;
+        opacity: .75;
+        transition: all 0.7s ease;
+    }
+}
+
+@media (max-width: 768px) {
+    .sideBarContent{
+        display: none
+    }
+}
+
+

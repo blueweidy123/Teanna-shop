@@ -1,0 +1,83 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Feb 21, 2023, 8:11:35 PM
+    Author     : anlal
+*/
+
+body{
+
+}
+
+.container{
+    width: 25%;
+    border: 1px solid red;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container img{
+    width: 100%;
+    height: 200px;
+    border: 1px solid blue;
+}
+
+.del{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    border: 1px solid blue;
+}
+
+.itemName{
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border: 1px solid blue;
+}
+
+.itemPrice{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    border: 1px solid blue;
+}
+
+.edname{
+    display: block;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: 1px solid red;
+    font-size: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.edPrice{
+    display: block;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: 1px solid red;
+    font-size: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.submitChange{
+    padding: 10px;
+    border: 1px solid green;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+}
+
+

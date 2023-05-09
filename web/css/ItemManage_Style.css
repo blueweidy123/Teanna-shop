@@ -1,0 +1,429 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Feb 10, 2023, 9:23:56 PM
+    Author     : anlal
+*/
+
+
+.tool-list{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    top: 0%;
+    right: 2.5%;
+    width: 52.5vw;
+    height: 70px;
+    border-bottom: 3px solid #FFF;
+    border-left: 3px solid #FFF;
+    border-right: 3px solid #FFF;
+    background: rgba(255, 255, 255, .6);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: all 1s ease;
+}
+
+.tool-list button{
+    border: none;
+    outline: none;
+    text-align: center;
+    margin: auto;
+    padding: 4px;
+    /*background: rgb(255,255,255,.2);*/
+    background: rgb(255,255,255, .7);
+    padding: 0 8px;
+    border-radius: 8px;
+    /*border: 1px solid red;*/
+}
+
+.t-bttn{
+    display: flex;
+    flex-direction: row;
+    /*height: 1rem;*/
+    /*padding: 1rem;*/
+    /*border: 2px solid #8d88d2;*/
+    margin: auto 0 auto 0;
+}
+
+ion-icon {
+    font-size: 1.5rem;
+    /*margin-top: 81px !important;;*/
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    /*border: 2px solid red;*/
+    transform: translateY(30%);
+}
+
+.searchInput{
+    background: rgb(242, 217, 230, .7);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.searchInput input[type=text]{
+    width: 20vw !important;
+    margin-right: 8px;
+}
+
+.searchInput button{
+    background: rgb(255,255,255,.7);
+    align-items: center;
+}
+
+.searchInput ion-icon{
+    transform: translateY(15%);
+}
+
+.filterContainer{
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    top: 85px;
+    right: 2.5vw;
+    /*border: 1px solid red;*/
+    width: 50vw;
+}
+.cateFilter{
+    width: 15vw;
+    border-radius: 8px;
+    margin: auto 0 auto auto;
+    border: none;
+    outline: none;
+    background: rgb(255,255,255,.7);
+    text-align: center;
+/*    transform: translateX(-25%);*/
+}
+
+.switch {
+    position: fixed;
+    right: calc(15vw + 5rem);
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    transform: translateY(-20%);
+}
+
+table, td, th{
+    transition: all .5s ease;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.dataList{
+    position: fixed;
+    top: 120px;
+    right: 2.5%;
+    border: 3px solid #FFF;
+    border-radius: 8px;
+    height: 80vh;
+    width: 52.5vw;
+    /*max-width:*/
+    overflow: scroll;
+    transition: all 1s ease;
+}
+
+.editView{
+    position: fixed;
+    height: 90vh;
+    width: 40vw;
+    top: 5%;
+    left: 2.5%;
+    border: 3px solid #FFF;
+    background: rgba(255, 255, 255, .2);
+    /*color: rgba(0, 0, 0, .6);*/
+    border-radius: 8px;
+    /*    border: 2px solid #FFF;*/
+    /*opacity: ;*/
+    transition: all 0.5s ease;
+    /*overflow: scroll;*/
+    flex-wrap: wrap;
+    border-style: dashed;
+    transition: all 0.5s ease;
+}
+
+.editItemImg{
+    display: block;
+    object-fit: fill;
+    width: calc(40vw - 2rem);
+    height: 45vh;
+    /*border: 1px solid #8d88d2;*/
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1rem auto 10px auto;
+    transition: all 0.5s ease;
+}
+.editItemImg img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.editItemCate{
+    width: calc(40vw - 2rem);
+    /*    border: 1px solid #8d88d2;*/
+    display: flex;
+    /*justify-content: space-between;*/
+    margin: 1rem auto 1rem auto;
+    transition: all 0.5s ease;
+}
+
+.cateSelectLabel{
+    margin: auto auto auto 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFF;
+}
+.cateSelect{
+    display: flex;
+    margin: auto 0 auto auto;
+    padding-left: 1rem;
+    width: 15vw;
+    background: rgb(255,255,255,.7);
+    border: none;
+    outline: none;
+    transition: all 0.5s ease;
+    border-radius: 8px;
+}
+
+.editItemImgUrl{
+    display: flex;
+    width: calc(40vw - 2rem);
+    margin: 1rem auto 1rem auto;
+    /*    border: 1px solid #8d88d2;*/
+    /*justify-content: flex-end;*/
+    transition: all 0.5s ease;
+}
+.editForm label{
+    /*border: 1px solid red;*/
+    margin: auto 0px;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.editItemName{
+    display: flex;
+    width: calc(40vw - 2rem);
+    margin: 1rem auto 1rem auto;
+    /*    border: 1px solid #8d88d2;*/
+    justify-content: flex-end;
+    transition: all 0.5s ease;
+}
+.editItemPrice{
+    display: flex;
+    width: calc(40vw - 2rem);
+    margin: auto auto;
+    /*    border: 1px solid #8d88d2;*/
+    justify-content: flex-end;
+    transition: all 0.5s ease;
+}
+.editButton{
+    display: block;
+    position: absolute;
+    bottom: 3rem;
+    right: calc((40vw - 2rem)/4);
+    width: calc(40vw - 2rem);
+    max-width: 20vw;
+    margin: 1rem auto 1rem auto;
+    /*    border: 1px solid #8d88d2;*/
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.5s ease;
+}
+.editButton-delete{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    width: calc(40vw - 2rem);
+    margin-top: auto;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    /*    border: 1px solid #8d88d2;*/
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.5s ease;
+    isolation: isolate;
+}
+.editButton-delete button{
+    /*    border: 2px solid #8d88d2;*/
+    background: red;
+    border-radius: 1rem;
+    color: white;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border: none;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.editButton-delete button:hover{
+    background: highlight;
+    transition: all 1s ease;
+}
+.editButton button{
+    border: 2px solid #fe8302;
+    background: #fe8302;
+    color: white;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+}
+.editButton button:hover{
+    background: highlight;
+    transition: all 1s ease;
+}
+
+.itemTable tr:hover{
+    /*border: 3px solid white;*/
+    transition: all 1s ease;
+}
+
+.editView.active{
+    border-style: solid;
+    transition: all 1s ease;
+}
+
+.editForm{
+    /*background: #8d88d2;*/
+    z-index: 3;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.editForm.active{
+    /*background: #8d88d2;*/
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+input[type=text],
+input[type=number]{
+    width: 28vw;
+    border-radius: 8px;
+    margin: auto 0 auto auto;
+    border: none;
+    outline: none;
+    background: rgb(255,255,255,.7);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.editItemImgUrl input[type=text]{
+    width: calc(28vw - 5vw - 1rem);
+    margin-right: 1rem;
+}
+.editItemImgUrl button{
+    width: 5vw;
+    border: none;
+    outline: none;
+    background: rgb(255,255,255,.7);
+    border-radius: 8px;
+}
+
+.editView-desc{
+    z-index: 2;
+    position: fixed;
+    top: 58%;
+    left: 22.5%;
+    color: #FFF;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+}
+.editView-desc.active{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+/*hidden id field*/
+/*.iId,
+.mode{
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding-left: 1rem;
+    width: 1rem;
+}*/
+
+.hiddem-para{
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding-left: 1rem;
+    /*display: none;*/
+}
+.hiddem-para input[type=text]{
+    padding: 8 10px 8 10px;
+    margin: 0 0 0 10px;
+    width: 4rem;
+}
+
+.hide{
+    display: none;
+    transition: all 1s ease;
+}
+
+.fr {
+    position: sticky;
+    top: 0px;
+    /*background-color: #f2f2f2;*/
+}
+
